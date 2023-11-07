@@ -1,0 +1,165 @@
+@charset "utf-8"
+
+body {
+    margin: 0;
+    padding: 0;
+    color:rgb(24, 23, 23);
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+h1, h2{
+    font-weight: 900;
+    color: rgb(173, 1, 159);
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background-color: #000000;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 15px;
+    animation: surgir 3.5s ease; /* colocar a animação */
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.5em;
+
+}
+
+section.modulo h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: rgb(209, 177, 117);
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+section.modulo.parallax h1{
+    color: rgb(236, 185, 46);
+    text-align: center;
+    font-size: 80px;
+    text-transform: uppercase;
+    z-index: 50;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+
+}
+
+section.modulo.parallax:after{
+content: "";
+height: 100%;
+width: 100%;
+z-index: 8; 
+position: absolute;
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 50%, rgb(209, 177, 117)) ;
+
+}
+
+
+
+section.modulo.parallax-1{
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/12/54/cafe-1869656_1280.jpg);
+}
+
+section.modulo.parallax-2{
+    background-image: url(https://cdn.pixabay.com/photo/2013/11/05/23/55/coffee-206142_1280.jpg);
+}
+
+section.modulo.parallax-3{
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/24/01/15/coffee-819362_1280.jpg);
+}
+
+
+@keyframes surgir{ /* animação formatação */
+    from{ /*  vir */
+        opacity: 0;
+        translate: -100vw 0;
+    
+    }
+
+    to{ /* chegar */
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+
+
+@media all and (max-width: 860px) {
+
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* overflow-y: hidden; */
+    }
+    
+    h1, h2{
+        font-weight: 900;
+        color: rgb(173, 1, 159);
+        padding-right: 10px;
+    }
+
+    section.modulo p{
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1em;
+       padding-right: 30px; 
+    }
+
+    section.modulo.parallax h1{
+        color: rgb(255, 255, 255)
+        text-align: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        z-index: 50;
+        text-shadow: 5px 5px 5px black;
+    }
+    }
+
+    footer{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(211, 144, 21);
+      
+       
+    }
+
+
